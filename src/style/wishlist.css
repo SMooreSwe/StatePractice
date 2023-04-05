@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+.body {
+  font-family: 'Lato', sans-serif;
+  color: #fefefd;
+  margin: 0;
+  background-color:#2a3591;
+}
+
+.header {
+  margin: 0;
+  padding: 0.5rem 0.2rem;
+  margin-bottom: 1rem;
+}
+
+.header__title {
+  margin: 0;
+  padding: 0rem 1rem 1rem 1rem;
+}
+
+.main__input-card {
+  display: flex;
+  border-radius: 0.5rem;
+  justify-content: space-around;
+  margin-inline: 1rem;
+  background-color: #01a0cd;
+}
+
+.input-card__legend {
+  background-color: #ed4f28;
+  padding-inline: 0.5rem;
+  border-radius: 0.2rem;
+}
+
+.input-card__form {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.form__input {
+  width: 100%;
+  margin-bottom: 10px;
+  border-radius: 0.2rem;
+  border: none;
+}
+
+.form__btn-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.form__btn-container__btn {
+  cursor: pointer;
+  background-color: #2a3591;
+  border: none;
+  border-radius: 2px;
+  color: #fefefd;
+}
+
+.main__card-list {
+  margin: 1rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+.card-list__list-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr 3.5rem;
+  grid-template-areas:
+  'title title button'
+  'description description description'
+  'description description description'
+  'description description description';
+  aspect-ratio: 2/1;
+  border-radius: 0.5rem;
+  background-color: #01a0cd;
+  padding: 0.5rem 0.6rem;
+  margin-block: 5px;
+  cursor: pointer;
+}
+
+.card-list__list-item:hover {
+box-shadow: 2px 2px 2px #fefefd;
+}
+
+.list-item__title {
+  grid-area: title;
+  margin: 0.5rem;
+}
+
+.list-item__descrip {
+  grid-area: description;
+  margin: 0 0.5rem;
+  font-style: italic;
+  overflow: auto;
+}
+
+.list-item__btn {
+  grid-area: button;
+  max-width: fit-content;
+  height: 20px;
+  cursor: pointer;
+  border: 0;
+  background: none;
+  color: #fefefd;
+  filter: opacity(40%);
+}
+
+.list-item__btn:hover {
+  filter: opacity(100%);
+}
+
+.list__item--completed {
+  background-color: #ed4f28;
+  filter: opacity(80%);
+  order: 2;
+}
+
+.list__item--completed:hover {
+  filter:opacity(90%);
+}
+
+@media all and (min-width: 480px) {
+  .input-card__form {
+    width: 80%;
+    justify-content: center;
+  }
+  
+  .form__input {
+    max-width: 500px;
+  }
+
+  .main__card-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .card-list__list-item {
+    aspect-ratio: 1/1;
+  }
+}
+
+@media all and (min-width: 769px) {
+
+  .input-card__form {
+    max-width: 500px
+  }
+
+  .main__card-list {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+}

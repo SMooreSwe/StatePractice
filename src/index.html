@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>&lt;/salt&gt; :: Shopping wish list</title>
+  <link rel="stylesheet" type="text/css" href="./style/wishlist.css">
+  <script defer src="./dist/wishlist.js"></script>
+</head>
+
+<body class="body">
+  <header class="header">
+    <h1 class="header__title">Welcome to the Salt Shopping Wishlist</h1>
+  </header>
+  <main class="main">
+    <fieldset class="main__input-card">
+      <legend class="input-card__legend">Add a new item to your wishlist here!</legend>
+      <form class="input-card__form">
+        <input type="text" id="txtCardTitle" data-testid="txtCardTitle" class="form__input" placeholder="I want a..." required>
+        <input type="text" id="txtCardDescrip" class="form__input" placeholder="describe it here...">
+        <div class="form__btn-container">
+          <input type="submit" id="btnAddCard" data-testid="btnAddCard" class="form__btn-container__btn" value="Add to List">
+        </div>
+      </form>
+    </fieldset>
+    <Section id="cardList" data-testid="cardList" class="main__card-list"></Section>
+  </main>
+</body>
+
+</html>
